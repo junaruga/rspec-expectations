@@ -186,9 +186,6 @@ module RSpec::Expectations
         expect {
           aggregate_failures do
             raise error
-
-            later_expectation_executed = true
-            expect(1).to eq(1)
           end
         }.to raise_error(error)
 
